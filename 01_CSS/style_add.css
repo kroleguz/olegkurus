@@ -1,0 +1,19 @@
+span{
+    font-style: italic;
+}
+p{
+    text-align: right;
+    white-space: pre;
+}
+.article{
+    margin: 30px;
+    text-align: left;
+    text-decoration: underline;
+    font-family: 'Bad Script', cursive;
+    font-weight: bold;
+}
+.list{
+    text-align: left;
+    white-space: pre;
+    font-family: 'Bad Script', cursive;
+}
