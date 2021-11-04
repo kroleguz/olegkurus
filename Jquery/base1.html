@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        width: 100%;
+    }
+    th{
+        background-color: gray;
+    }
+    td{
+        text-align: center;
+        border-bottom-style: dotted;
+        border-left-style: dotted;
+    }
+    .first{
+        border-left-style: none;
+        text-align: left;
+        font-weight: bolder;
+    }
+    P{
+        text-align: center;
+        color: gray;
+
+    }
+    tr:nth-child(2n+3){
+        background-color: lightgrey;
+    }
+    #btn{
+        width: 150px;
+        height: 35px;
+        background-color: blue;
+        color:#fff;
+        border-radius: 3px/3px;
+        margin-left: 15px;
+        border: 1px solid blue;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>ФИО</th>
+            <th>пол</th>
+            <th>должность</th>
+            <th>дата рож.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr class="str1">
+            <td class="first">Иванов Иван Иванович</td>
+            <td>М</td>
+            <td>начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr class="str2">
+            <td class="first">Петрова Илонна Петровна</td>
+            <td>Ж</td>
+            <td>секретарь</td>
+            <td>01.01.1989</td>
+            <td>98795</td>
+            <td>46523</td>
+        </tr>
+        <tr class="str3">
+            <td class="first">Сидоров Илья Игоревич</td>
+            <td>М</td>
+            <td>бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>743434</td>
+            <td>987979</td>
+        </tr>
+        <tr class="str4">
+            <td class="first">Пупин Фёдор Фёдорович</td>
+            <td>М</td>
+            <td>водитель</td>
+            <td>01.01.1963</td>
+            <td>74323434</td>
+            <td>9232379</td>
+        </tr>
+        <tr class="str5">
+            <td class="first">Крупин Сергей Иванович</td>
+            <td>М</td>
+            <td>водитель2</td>
+            <td>01.01.1983</td>
+            <td>3234534</td>
+            <td>923123379</td>
+        </tr>
+    </table>
+    <p>ДАННЫЕ О СОТРУДНИКАХ</p>
+    <button id="btn">Нет cкрытых строк</button>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function($){
+            $(".str1").click(function(){
+                $(".str1").hide();
+                $("#btn").text("Показать все строки");
+            });
+            $(".str2").click(function(){
+                $(".str2").hide();
+                $("#btn").text("Показать все строки");
+            });
+            $(".str3").click(function(){
+                $(".str3").hide();
+                $("#btn").text("Показать все строки");
+            });
+            $(".str4").click(function(){
+                $(".str4").hide();
+                $("#btn").text("Показать все строки");
+            });
+            $(".str5").click(function(){
+                $(".str5").hide();
+                $("#btn").text("Показать все строки");
+            });
+            $("#btn").on("click", function(){
+                $("tr").show()
+                $("#btn").text("Нет скрытых строк");
+                $("#btn").focus
+                $(this).css("border", "3px solid lightskyblue")
+                .blur(function(){
+                $(this).css("border", "1px solid blue")    
+                })
+            });
+        });
+    </script>
+    
+</body>
+</html>
